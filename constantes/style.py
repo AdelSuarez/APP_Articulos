@@ -1,0 +1,3 @@
+BACKGROUND = '#fff'
+MENSAJE_FALLA = 'red'
+MENSAJE_APROBADO = 'green'
