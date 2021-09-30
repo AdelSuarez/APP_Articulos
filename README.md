@@ -3,3 +3,5 @@
 	La aplicacion realiza operacines basicas de un inventario o lista de articulos en la cual se puede crear un articulo, consultarlo, borrarlo, y editarlo, y de igual forma se puede ir viendo la lista de los articulos creados.
 
 	La aplicacion se encuentra en desarrollo, pero de igual forma es con fines de aprendizaje
+
+	Se encunentra en una versin de pruebas 
