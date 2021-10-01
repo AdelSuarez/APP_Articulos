@@ -4,4 +4,4 @@
 
 	La aplicacion se encuentra en desarrollo, pero de igual forma es con fines de aprendizaje
 
-	Se encunentra en una versin de pruebas 
+	Se encuentra en una versin de pruebas 

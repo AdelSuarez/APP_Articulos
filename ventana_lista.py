@@ -3,9 +3,7 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 from constantes import style
-from conexion.lista_completa import listado_completo 
-
-
+from conexion.lista_completa import listado_completo
 
 class Lista_articulos(ttk.Frame):
 	def __init__(self, *args, **kwargs):
@@ -15,7 +13,10 @@ class Lista_articulos(ttk.Frame):
 		self.frame_lista.config(bg=style.BACKGROUND)
 		self.frame_lista.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 
-		ttk.Button(self.frame_lista, text='Actualizar lista', command=lambda:listado_completo(self.lista)).grid(row=1, column=0, columnspan=2, pady=4)
+		ttk.Button(self.frame_lista, text='Actualizar lista', command=lambda:listado_completo(self.lista,self.mensaje_info)).grid(row=1, column=0, columnspan=2, pady=4)
+
+		self.mensaje_info = tk.Label(self.frame_lista, text='', bg=style.BACKGROUND)
+		self.mensaje_info.grid(row=3, column=0, columnspan=2, pady=6)
 
 		self.lista = tk.Text(self.frame_lista, width=65, height=20)
 		self.lista.grid(row=2, column=1, pady=10)
