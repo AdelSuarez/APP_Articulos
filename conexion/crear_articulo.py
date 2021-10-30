@@ -23,7 +23,6 @@ def serial():
 		return(serial)
 
 
-
 def validacion_campos(nombre, precio):
 	'''
 	Funcion que valida que el usuario no deje campos vacios 
@@ -35,7 +34,7 @@ def validacion_campos(nombre, precio):
 def validacion_precio(precio, mensaje):
 	'''
 	Funcion que valida los caracteres introducidos en el Entry del precio
-	verificando que no se halla introducido valores alfanumericos
+	verificando que no se halla introducido valores alfabeticos
 
 	"Observacion: todavia falta pulir la funcions para que reciva valores float"
 	'''
