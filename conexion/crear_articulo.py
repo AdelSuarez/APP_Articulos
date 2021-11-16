@@ -1,5 +1,5 @@
 import tkinter as tk
-from conexion.conexion import conexion
+from conexion.conexion  import conexion
 from constantes import style
 import random
 
