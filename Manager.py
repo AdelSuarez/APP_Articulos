@@ -1,12 +1,12 @@
 import tkinter as tk
 from tkinter import ttk
-from ventana_crear import Crear_articulo
-from ventana_consulta import Consultar_articulo
-from ventana_lista import Lista_articulos
-from ventana_borrar import Borra_articulo
-from ventana_modificar import Modificar_articulo
+from GUI.Win_create import Win_create
+from GUI.Win_query import Win_query
+from GUI.Win_list import Win_list
+from GUI.Win_delete import Win_delete
+from GUI.Win_edit import Win_edit
 from menu_bar import Menu_bar
-from constantes import style
+
 
 '''
 	Clase que administra todas las clases que crean ventanas y contiene el notebook que utiliza todas 
@@ -19,27 +19,27 @@ class Manager(ttk.Frame):
 		self.master = master
 		self.master.resizable(0,0)
 		self.pack()
-		self.crear_widgets()
+		self.create_widgets()
 
-	def crear_widgets(self):
+	def create_widgets(self):
 
-		# Barra superion de opciones
+		# Top bar
 		self.menu_bar = Menu_bar(self.master)
 
 
-		# Gestor de la ventanas de enventos
+		# Window manager
 		self.notebook = ttk.Notebook(self)
 
-		self.crear_ventana = Crear_articulo(self.notebook)
-		self.consultar_articulo = Consultar_articulo(self.notebook)
-		self.lista_articulos = Lista_articulos(self.notebook)
-		self.borrar_articulo = Borra_articulo(self.notebook)
-		self.modificar_articulo = Modificar_articulo(self.notebook)
+		self.create = Win_create(self.notebook)
+		self.query = Win_query(self.notebook)
+		self.list = Win_list(self.notebook)
+		self.delete = Win_delete(self.notebook)
+		self.edit = Win_edit(self.notebook)
 
-		self.notebook.add(self.crear_ventana, text='Carga de artículos', padding=20)
-		self.notebook.add(self.consultar_articulo, text='Consulta por código', padding=20)
-		self.notebook.add(self.lista_articulos, text='Listado completo', padding=20)
-		self.notebook.add(self.borrar_articulo, text='Borrado de artículo', padding=20)
-		self.notebook.add(self.modificar_articulo, text='Modificar artículo', padding=20)
+		self.notebook.add(self.create, text='Carga de artículos', padding=20)
+		self.notebook.add(self.query, text='Consulta por código', padding=20)
+		self.notebook.add(self.list, text='Listado completo', padding=20)
+		self.notebook.add(self.delete, text='Borrado de artículo', padding=20)
+		self.notebook.add(self.edit, text='Modificar artículo', padding=20)
 		self.notebook.pack(pady=10, padx=10)
 

@@ -9,10 +9,12 @@ def verificacion_articulo(codigo, nombre, precio, mensaje, boton, entry_nombre, 
 	Funcion que verifica que el articulo exista, muestra el articulo que se va modificar, 
 	y activa el los entry del nuevo nombre y precio y el boton para que se pueda modificar
 	'''
-	if len(codigo.get()) != 0:
+
+	codigo_espacios = (codigo.get()).strip()
+
+	if len(codigo_espacios) != 0:
 		query = 'SELECT * FROM ARTICULOS WHERE ID=?'
-		serial_sin_espacios = (codigo.get()).strip()
-		parameter = (serial_sin_espacios, )
+		parameter = (codigo_espacios, )
 		articulo = conexion(query, parameter).fetchall()
 		if (articulo == []):
 			mensaje['fg'] = style.MENSAJE_FALLA

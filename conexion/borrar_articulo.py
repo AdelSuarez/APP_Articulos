@@ -9,10 +9,12 @@ def borrar_articulo(codigo, mensaje, nombre, precio):
 	si se encuentra el codigo en la base de datos, y por ultimo borra el articulo de la base
 	de datos
 	'''
-	if len(codigo.get()) != 0:
+	codigo_espacios = (codigo.get()).strip()
+
+	if len(codigo_espacios) != 0:
+
 		query = 'SELECT * FROM ARTICULOS WHERE ID=?'
-		serial_sin_espacios = (codigo.get()).strip()
-		parameter = (serial_sin_espacios, )
+		parameter = (codigo_espacios, )
 		articulo = conexion(query, parameter).fetchall()
 
 		if (articulo == []):
@@ -23,12 +25,11 @@ def borrar_articulo(codigo, mensaje, nombre, precio):
 			for i in articulo:
 				nombre.set(i[1])
 				precio.set(i[2])	
-			valor = messagebox.askquestion('Borrar artículo', 'Deseas borrar le artículo')
+			valor = messagebox.askquestion('Borrar artículo', 'Deseas borrar el artículo')
 
 			if valor == 'yes':
 				query = 'DELETE FROM ARTICULOS WHERE ID = ?'
-				serial_sin_espacios = (codigo.get()).strip()
-				parameter = (serial_sin_espacios, )
+				parameter = (codigo_espacios, )
 				conexion(query, parameter)
 				codigo.delete(0, tk.END)
 				mensaje['fg'] = style.MENSAJE_APROBADO

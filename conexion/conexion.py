@@ -12,5 +12,3 @@ def conexion(query, parameter = ()):
 	conexion.commit()
 
 	return resultado
-
-			
