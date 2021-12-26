@@ -12,7 +12,7 @@ class Win_delete(ttk.Frame):
 		self.price_var = tk.StringVar()
 
 		self.frame_delete = tk.Frame(self)
-		self.frame_delete.config(padx=160, bg=config.BACKGROUND)
+		self.frame_delete.config(bg=config.BACKGROUND)
 		self.frame_delete.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 
 		tk.Label(self.frame_delete, text='Borrar artículo', bg=config.BACKGROUND).grid(row=1, column=0, columnspan=2)

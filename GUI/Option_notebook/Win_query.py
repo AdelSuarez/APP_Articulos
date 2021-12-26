@@ -12,7 +12,7 @@ class Win_query(ttk.Frame):
 
 
 		self.frame_query = tk.Frame(self)
-		self.frame_query.config(padx=160, bg=config.BACKGROUND)
+		self.frame_query.config(bg=config.BACKGROUND)
 		self.frame_query.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 
 		tk.Label(self.frame_query, text='Consulta artículo', bg=config.BACKGROUND).grid(row=0, column=0, columnspan=2, pady=10)

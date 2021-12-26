@@ -10,7 +10,7 @@ class Win_edit(ttk.Frame):
 		super().__init__(*args, **kwargs)
 
 		self.frame_edit = tk.Frame(self)
-		self.frame_edit.config(padx=150, bg=config.BACKGROUND)
+		self.frame_edit.config(bg=config.BACKGROUND)
 		self.frame_edit.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 
 		tk.Label(self.frame_edit, text='Editar artículo', bg=config.BACKGROUND).grid(row=0, column=0, columnspan=2)

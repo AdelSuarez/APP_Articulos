@@ -2,6 +2,7 @@ import tkinter as tk
 import random
 from db.Connection import DataBase
 from setting import config
+from db.List import List
 
 
 class Create():
@@ -17,6 +18,7 @@ class Create():
 			if self.price_validation(self._price):
 				query = 'INSERT INTO ARTICULOS VALUES(?,?,?)'
 				parameters = (self.serial_generator(), self._name.get(), self._price.get())
+				print(parameters)
 				DataBase(query, parameters)
 				self._name.delete(0, tk.END)
 				self._price.delete(0, tk.END)

@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from setting import config
 from db.Create import Create
+from db.List import List
 
 '''
 	Clase que crea la venta de "Cargar de artículo" donde contiene los widgets y funciones de 
@@ -13,7 +14,7 @@ class Win_create(ttk.Frame):
 		super().__init__(*args, **kwargs)
 
 		self.frame_create = tk.Frame(self)
-		self.frame_create.config(padx=160, bg=config.BACKGROUND)
+		self.frame_create.config(bg=config.BACKGROUND)
 		self.frame_create.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 
 		tk.Label(self.frame_create, text='Artículo Nuevo', bg=config.BACKGROUND).grid(row=0, column=0, columnspan=2, pady=10)

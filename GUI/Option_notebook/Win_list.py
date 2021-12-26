@@ -1,4 +1,3 @@
-from conexion.conexion import conexion
 import tkinter as tk
 from tkinter import ttk
 from setting import config
@@ -22,5 +21,4 @@ class Win_list(ttk.Frame):
 		self.list.grid(row=2, column=1, pady=10)
 		self.scroll = tk.Scrollbar(self.frame_list, command=self.list.yview)
 		self.scroll.grid(row=2, column=2, sticky=tk.NSEW)
-		self.list.config(yscrollcommand=self.scroll.set)
-
+		self.list.config(yscrollcommand=self.scroll.set)		
