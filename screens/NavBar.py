@@ -1,4 +1,6 @@
 import tkinter as tk
+
+import tkinter.messagebox
 from setting import config
 
 
@@ -10,3 +12,6 @@ class Navbar(tk.Frame):
 
         self.title = tk.Label(self, text="SISTEMA DE INVENTARIO", **config.TITLE_CONFIG)
         self.title.pack(side=tk.LEFT, padx=5)
+
+        self.info = tk.Button(self, text='INFO', relief=tk.FLAT, overrelief=tk.RAISED, **config.BUTTON_INFO, justify=tk.CENTER)
+        self.info.pack(side=tk.RIGHT, padx=10)

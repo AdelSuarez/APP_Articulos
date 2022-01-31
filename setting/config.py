@@ -6,5 +6,14 @@ READY = 'green'
 TITLE_CONFIG = {
     'bg':BACKGROUND_SECONDARY,
     'fg':'#FFF',
-    'font':'Roboto 14 bold'
+    'font':'Oswald 14 bold'
+}
+
+BUTTON_INFO = {
+    'bg':'#FFF',
+    'fg':BACKGROUND_SECONDARY,
+    'activebackground':'#e6e6e6',
+    'activeforeground': BACKGROUND_SECONDARY,
+    'font': 'Roboto 10 bold',
+    'bd':0
 }

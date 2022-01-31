@@ -4,7 +4,7 @@ class DataBase():
 	def __init__(self, query, parameter = ()):
 		self._query = query
 		self._parameters = parameter
-		self._db = 'Articulos'
+		self._db = 'DataBase.db'
 		self.query_db()
 
 	def query_db(self):
@@ -16,4 +16,3 @@ class DataBase():
 
 	def fetchall(self):
 		return self.query_db().fetchall()
-	

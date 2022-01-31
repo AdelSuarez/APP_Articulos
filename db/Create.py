@@ -5,7 +5,7 @@ from setting import config
 from db.List import List
 
 
-class Create():
+class Create:
 	def __init__(self, name, price, message):
 		self._name = name
 		self._price = price

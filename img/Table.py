@@ -29,7 +29,6 @@ class Table(tk.Frame):
         """Table setting to expand horizontally and vertically"""
         self.columnconfigure(0, weight=1) #Horizontally
         self.rowconfigure(0, weight=1) #Vertically
-        # self.columnconfigure(0, minsize=100)
 
     def item_table(self):
         try:
